@@ -7,6 +7,9 @@ import {Navbar} from "./components/navbar";
 
 import React, {components} from "react";
 
+import Shop from "./pages/shop/shop.jsx";
+import Cart from "./pages/cart/cart.jsx";
+
 function App() {
   return (
     <div className="App">
@@ -16,8 +19,8 @@ function App() {
 
         <Routes>
 
-          <Route path="/" />
-          <Route path="/cart" />
+          <Route path="/" element={<Shop />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </Router>
     
