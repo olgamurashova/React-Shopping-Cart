@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 import {Navbar} from "./components/navbar";
 
+import React, {components} from "react";
+
 function App() {
   return (
     <div className="App">
