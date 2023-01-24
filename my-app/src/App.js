@@ -9,10 +9,12 @@ import React, {components} from "react";
 
 import Shop from "./pages/shop/shop.jsx";
 import Cart from "./pages/cart/cart.jsx";
+import ShopContextProvider from './context/shop-context';
 
 function App() {
   return (
     <div className="App">
+      <ShopContextProvider>
 
       <Router>
         <Navbar />
@@ -23,6 +25,8 @@ function App() {
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </Router>
+
+      </ShopContextProvider>
     
     </div>
   );
