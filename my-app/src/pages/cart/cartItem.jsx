@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-const cartItem = (props) => {
+export const CartItem = (props) => {
     const { id, productName, price, productImage } = props.data;
 
   return (
@@ -13,12 +13,12 @@ const cartItem = (props) => {
             <p>
                 <b> {productName} </b>
             </p>
-            <p>${price}</p>
+            <p> Price:${price}</p>
 
         </div>
       
     </div>
   )
-}
+};
 
-export default cartItem
+

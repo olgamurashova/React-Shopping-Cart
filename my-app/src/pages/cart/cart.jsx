@@ -3,7 +3,7 @@ import { PRODUCTS } from '../../products';
 
 import { ShopContext } from "../../context/shop-context";
 
-import {cartItem} from "./cartItem";
+import {CartItem} from "./cartItem";
 
 
 
@@ -21,7 +21,7 @@ const Cart = () => {
      <div className='cart'>
      {PRODUCTS.map((product) => {
       if(cartItems[product.id] !== 0) {
-        return < cartItem data={product} />;
+        return < CartItem data={product} />;
       }
     
      })};
