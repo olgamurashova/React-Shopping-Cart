@@ -5,6 +5,8 @@ import { ShopContext } from "../../context/shop-context";
 
 import {CartItem} from "./cartItem";
 
+import "./cart.css";
+
 
 
 const Cart = () => {
