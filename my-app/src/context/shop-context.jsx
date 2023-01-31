@@ -1,3 +1,4 @@
+import { Cat } from 'phosphor-react';
 import React from 'react';
 
 import { createContext, useEffect, useState } from 'react';
@@ -41,7 +42,22 @@ export const ShopContextProvider = (props) => {
         setCartItems((prev) => ({...prev, [itemId]: newAmount}));
     }
 
-    const contextValue = {cartItems, addToCart, removeFromCart};
+    //Get Total Cart Amount
+
+    const totalCartAmount = () => {
+        let totalAmount = 0;
+        for (const item in cartItems) {
+            if (cartItems[item] > 0) {
+                let itemInfo = PRODUCTS.find((product) => product.id === Number(item));
+                totalAmount += cartItems[item] * itemInfo.price;
+            }
+        }
+        return totalAmount;
+    }
+
+
+
+    const contextValue = {cartItems, addToCart, removeFromCart, updatecartItemCount};
 
   
 
